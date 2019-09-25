@@ -11,28 +11,29 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php 
+    get_header(); 
+?>
 <main>
 <?php
-
     if ( have_posts() ) :
     while ( have_posts() ) : the_post();
 ?>
     <article>
         <h2><?php the_title(); ?></h2>
-<?php
-    the_content();
-    endwhile;
-    else :
-        echo '<p>Sorry buddy, no content to display.</p>';
-    endif;
-?>
+        <?php
+            the_content();
+            endwhile;
+            else :
+                echo '<p>Sorry buddy, no content to display.</p>';
+            endif;
+        ?>
     </article>
     <aside>
     <div class="widget">
-    <?php if ( is_active_sidebar( 'sidebar1' ) ): ?>
-        <?php dynamic_sidebar(' sidebar1' ); ?>
-    <?php endif; ?>
+        <?php if ( is_active_sidebar( 'sidebar1' ) ): ?>
+            <?php dynamic_sidebar(' sidebar1' ); ?>
+        <?php endif; ?>
     </div>
     </aside>
 </main>

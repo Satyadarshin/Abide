@@ -21,8 +21,9 @@
         </head>
         <body <?php body_class(); ?>>
         <div id="container">
-            <header>
-                <h1><a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/main-logo.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
+            <header id="page_header">
+                <h1><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/main-logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
             </header>
+            <?php get_template_part( 'navigation' ); ?>
             
     

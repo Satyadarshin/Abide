@@ -1,4 +1,5 @@
 <?php
+
 	//Widget locations
 	function abideWidgets() {
 		register_sidebar(
