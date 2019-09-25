@@ -10,9 +10,10 @@
  * @since Abide 1.0
  */
 ?>
+
+<?php get_header(); ?>
 <main>
 <?php
-    get_header();
 
     if ( have_posts() ) :
     while ( have_posts() ) : the_post();
@@ -28,9 +29,11 @@
 ?>
     </article>
     <aside>
+    <div class="widget">
     <?php if ( is_active_sidebar( 'sidebar1' ) ): ?>
         <?php dynamic_sidebar(' sidebar1' ); ?>
     <?php endif; ?>
+    </div>
     </aside>
 </main>
 <?php

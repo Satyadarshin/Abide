@@ -12,3 +12,117 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: abide
 */
+
+@import url('https://fonts.googleapis.com/css?family=Bahiana&display=swap');
+$base_blue: #75b1b8;
+$dark_blue: #02715A;
+$orange: #D16200;
+$white: #fcfcfc;
+$oil: #2C2416;
+body {
+    background: url('images/main-bg.jpg') 0 0 repeat;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    height: 25vh;
+    margin-bottom: -1rem;
+    background: url('images/line-horiz-top.png') 100% 100% no-repeat;
+    border-bottom: none;
+    img {
+        position: relative;
+        margin-top: -1.5rem;
+        left: 30%;
+    }
+}
+
+main {
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3rem;
+    background: url('images/panel-tile.jpg') 0 0 repeat;
+    article {
+        background: url('images/line-horiz-top.png') 100% 100% no-repeat;
+        .wp-block-image figure {
+            margin: 0;
+        }
+    }
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Bahiana', cursive;
+    color: $base_blue;
+}
+
+h2 {
+    font-size: 400%;
+    margin: 1rem 0;
+}
+
+p {
+    color: $oil;
+    font-family: "Courier", courier, serif;
+}
+
+a {
+    color: $orange;
+    text-decoration: none;
+    &:hover {
+        color: $dark_blue;
+        ;
+    }
+}
+
+aside {
+    .widget {
+        margin-top: 2rem;
+    }
+    background: url('images/stage-lights.png') 100% 100% no-repeat;
+}
+
+footer {
+    p {
+        color: $dark_blue;
+    }
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-buttons {
+        display: flex;
+        li {
+            display: inline-block;
+            height: 60px;
+            list-style-type: none;
+            margin-right: 1rem;
+            a {
+                display: inline-block;
+                height: 90px;
+                width: 100%;
+            }
+        }
+        #email_sprite {
+            width: 85px;
+            background: url('images/main-sprite.png') 0 0 no-repeat;
+        }
+        #facebook_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -88px 0 no-repeat;
+        }
+        #twitter_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -160px 0 no-repeat;
+        }
+        #youtube_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -225px 0 no-repeat;
+        }
+    }
+}

@@ -10,3 +10,87 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: 
 Text Domain: abide
 */
+@import url("https://fonts.googleapis.com/css?family=Bahiana&display=swap");
+body {
+  background: url("images/main-bg.jpg") 0 0 repeat; }
+
+#container {
+  max-width: 900px;
+  margin: 0 auto; }
+
+header {
+  height: 25vh;
+  margin-bottom: -1rem;
+  background: url("images/line-horiz-top.png") 100% 100% no-repeat;
+  border-bottom: none; }
+  header img {
+    position: relative;
+    margin-top: -1.5rem;
+    left: 30%; }
+
+main {
+  padding: 0 2rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 3rem;
+  background: url("images/panel-tile.jpg") 0 0 repeat; }
+  main article {
+    background: url("images/line-horiz-top.png") 100% 100% no-repeat; }
+    main article .wp-block-image figure {
+      margin: 0; }
+
+h2,
+h3,
+h4 {
+  font-family: 'Bahiana', cursive;
+  color: #75b1b8; }
+
+h2 {
+  font-size: 400%;
+  margin: 1rem 0; }
+
+p {
+  color: #2C2416;
+  font-family: "Courier", courier, serif; }
+
+a {
+  color: #D16200;
+  text-decoration: none; }
+  a:hover {
+    color: #02715A; }
+
+aside {
+  background: url("images/stage-lights.png") 100% 100% no-repeat; }
+  aside .widget {
+    margin-top: 2rem; }
+
+footer {
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  footer p {
+    color: #02715A; }
+  footer .social-buttons {
+    display: flex; }
+    footer .social-buttons li {
+      display: inline-block;
+      height: 60px;
+      list-style-type: none;
+      margin-right: 1rem; }
+      footer .social-buttons li a {
+        display: inline-block;
+        height: 90px;
+        width: 100%; }
+    footer .social-buttons #email_sprite {
+      width: 85px;
+      background: url("images/main-sprite.png") 0 0 no-repeat; }
+    footer .social-buttons #facebook_sprite {
+      width: 70px;
+      background: url("images/main-sprite.png") -88px 0 no-repeat; }
+    footer .social-buttons #twitter_sprite {
+      width: 70px;
+      background: url("images/main-sprite.png") -160px 0 no-repeat; }
+    footer .social-buttons #youtube_sprite {
+      width: 70px;
+      background: url("images/main-sprite.png") -225px 0 no-repeat; }
