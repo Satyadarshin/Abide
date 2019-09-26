@@ -46,7 +46,6 @@ body {
         #main_nav ul li a:hover {
           color: #D16200; }
       #main_nav ul li > ul {
-        visibility: hidden;
         margin: -.25rem;
         padding-left: .25rem;
         position: absolute; }

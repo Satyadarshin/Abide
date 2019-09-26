@@ -1,9 +1,8 @@
-
 <?php
 /**
  * The default template for displaying the content.
  *
- * Pulls together all of the template parts needed to display a complete page content.
+ * Pulls together all of the template parts needed to display complete page content.
  *
  * @package WordPress
  * @subpackage Abide
