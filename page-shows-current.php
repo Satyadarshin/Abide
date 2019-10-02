@@ -37,17 +37,26 @@
 	<div class="">
 		<a href="<?php the_permalink(); ?>">
 		<?php
-			$default_attr = array(
-				'class'	=> "img",
-				'alt'	=> get_the_title( $post_id ),
-			);
-			the_post_thumbnail( 'medium' , $default_attr  );
+			// $default_attr = array(
+			// 	'class'	=> "img",
+			// 	'alt'	=> get_the_title( $post_id ),
+			// );
+			// the_post_thumbnail( 'medium' , $default_attr  );
 		?>
 		</a>
 		<div class="">
 			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<?php the_excerpt(); ?>
-			<a class="" href="<?php the_permalink(); ?>">read more</a>
+			<?php 
+			
+			// if ( has_post_thumbnail() ) {
+			// 	$default_attr = array(
+			// 		'class' => "img",
+			// 		'alt'   => get_the_title( $post_id ),
+			// 	);
+			// 	the_post_thumbnail( 'medium' , $default_attr  );
+			// } 
+			the_excerpt(); ?>
+			<a class="" href="<?php the_permalink(); ?>">Read more</a>
 		</div>
 	</div>
 	<?php endwhile; ?>

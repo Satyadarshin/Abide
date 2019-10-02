@@ -5,7 +5,7 @@
 		register_sidebar(
 			array(
 				'name' => 'Sidebar',
-				'id' => 'sidebar1',
+				'id' => 'sidebar_1',
 				'before_widget' => '<div>',
 				'after_widget' => '</div>',
 				'before_title' => '<h4>',
