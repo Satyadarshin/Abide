@@ -1,0 +1,23 @@
+/*
+    Wordpress' built-in search widget
+*/
+#searchform {
+    font-family: $body_text;
+    div {
+        label {
+            margin-bottom: .5rem;
+        }
+        display: flex;
+        flex-basis:max-content;
+        flex-direction: column;
+    }
+    #searchsubmit {
+        @include abide_button;
+        margin-top: .5rem;
+        font-size: 1rem;
+        color: $white;
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}

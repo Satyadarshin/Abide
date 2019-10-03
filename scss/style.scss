@@ -1,244 +1,152 @@
-        @charset "UTF-8";
-        /*
-Theme Name: Abide
-Theme URI: http://www.satyadarshin.com/Abide
-Author: Satyadarshin Perry
-Author URI: http://www.satyadarshin.com/
-Description: 
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: 
-Text Domain: abide
+@charset "UTF-8";
+/*
+    Theme Name: Abide
+    Theme URI: http://www.satyadarshin.com/Abide
+    Author: Satyadarshin Perry
+    Author URI: http://www.satyadarshin.com/
+    Description: 
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: 
+    Text Domain: abide
 */
-        
-        @import url('https://fonts.googleapis.com/css?family=Bahiana&display=swap');
-        $base_blue: #75b1b8;
-        $dark_blue: #02715A;
-        $orange: #D16200;
-        $white: #fcfcfc;
-        $oil: #2C2416;
-        $semi-transparent_oil: rgba(44,
-        36,
-        22,
-        .5);
-        $body_text: "Courier",
-        courier,
-        serif;
-        $heading_font: 'Bahiana',
-        cursive;
-        * {
-            box-sizing: border-box;
+      
+@import 'colors';
+@import 'typography';
+@import 'mixins';
+@import 'widgets';
+@import 'navigation';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('images/main-bg.jpg') 0 0 repeat;
+}
+
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#page_header {
+    height: 25vh;
+    margin-bottom: -1rem;
+    border-bottom: none;
+    img {
+        position: relative;
+        margin-top: -1.5rem;
+        left: 30%;
+    }
+        background: url('images/line-horiz-top.png') 100% 100% no-repeat;
+
+}
+
+
+main {
+    min-height: 50vh;
+    padding: 0 2rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3rem;
+    background: url('images/panel-tile.jpg') 0 0 repeat;
+    article {
+        background: url('images/line-horiz-top.png') 100% 100% no-repeat;
+        .wp-block-image figure {
+            margin: 0;
         }
-        
-        body {
-            background: url('images/main-bg.jpg') 0 0 repeat;
-        }
-        
-        #container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        #page_header {
-            height: 25vh;
-            margin-bottom: -1rem;
-            border-bottom: none;
-            img {
-                position: relative;
-                margin-top: -1.5rem;
-                left: 30%;
-            }
-        }
-        
-        #main_nav {
-            background: url('images/line-horiz-top.png') 100% 100% no-repeat;
-            height: 6rem;
-            ul {
-                display: flex;
-                justify-content: space-between;
-                list-style-type: none;
-                flex-wrap: nowrap;
-                li {
-                    a {
-                        color: $white;
-                        &:hover {
-                            color: $orange;
-                        }
-                    }
-                    font-size: 110%;
-                    font-family: $heading_font;
-                    >ul {
-                        //visibility: hidden;
-                        margin: -.25rem;
-                        padding-left: .25rem;
-                        position: absolute;
-                        li {
-                            margin-right: 2rem;
-                            display: flex;
-                            position: relative;
-                            top: .5rem;
-                        }
-                    }
-                    &:hover {
-                        background: $semi-transparent_oil;
-                        height: 2rem;
-                        padding: 1rem;
-                        border: 1px solid red;
-                        >ul {
-                            border: 1px solid red !important;
-                            li {
-                                background: $semi-transparent_oil;
-                                visibility: visible;
-                            }
-                        }
-                    }
-                }
-            }
-            // ul {
-            //     font-size: 110%;
-            //     font-family: $heading_font;
-            //     list-style: none;
-            //     margin: 0;
-            //     padding: 0;
-            //     display: flex;
-            //     flex-wrap: nowrap;
-            //     li {
-            //         width: 25%; // set per menu
-            //         @media (max-width: 40em) {
-            //             width: 100%;
-            //         }
-            //         >ul {
-            //             display: flex;
-            //             visibility: hidden;
-            //             position: absolute;
-            //             left: -99999;
-            //             flex-direction: column;
-            //             li {
-            //                 width: 100%;
-            //                 position: relative;
-            //                 @media (min-width: 40em) {
-            //                     > ul {
-            //                         position: absolute !important;
-            //                         top: 0;
-            //                         left: 100% !important;
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //         &:hover {
-            //             a {
-            //                 background: lightBlue;
-            //                 color: blue;
-            //                 &:hover {
-            //                     color: green;
-            //                 }
-            //             }
-            //             >ul {
-            //                 visibility: visible;
-            //                 position: relative;
-            //                 left: 0;
-            //             }
-            //         }
-            //     }
-            // }
-        }
-        
-        main {
-            min-height: 50vh;
-            padding: 0 2rem 2rem;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-gap: 3rem;
-            background: url('images/panel-tile.jpg') 0 0 repeat;
-            article {
-                background: url('images/line-horiz-top.png') 100% 100% no-repeat;
-                .wp-block-image figure {
-                    margin: 0;
-                }
-            }
-        }
-        
-        h2,
-        h3,
-        h4 {
-            font-family: $heading_font;
-            color: $base_blue;
-        }
-        
-        h2 {
-            font-size: 400%;
-            margin: 1rem 0;
-        }
-        
-        p {
-            line-height: 1.5;
-            color: $oil;
-            font-family: $body_text;
-        }
-        
-        ul {
-            line-height: 1.5;
-            color: $oil;
-            font-family: $body_text;
-            li {
-                margin-bottom: 1rem;
-            }
-            margin-left: -1.5rem;
-        }
-        
+    }
+}
+
+
+
+.post_item {
+    h3 {
+        font-size: 200%;
         a {
-            color: $orange;
-            text-decoration: none;
+            color: #75b1b8;
             &:hover {
-                color: $dark_blue;
-                ;
+                color: $orange;
             }
         }
-        
-        aside {
-            .widget {
-                margin-top: 2rem;
-            }
-            background: url('images/stage-lights.png') 100% 100% no-repeat;
+    }
+    display: flex;
+    border: 1px solid silver;
+    background-color: #ececec;
+    margin-bottom: 2rem;
+    .post_intro {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .post_thumb {
+        &:hover {
+            opacity: .7;
         }
-        
-        footer {
-            p {
-                color: $dark_blue;
-            }
-            height: 8vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .social-buttons {
-                display: flex;
-                li {
-                    display: inline-block;
-                    height: 60px;
-                    list-style-type: none;
-                    margin-right: 1rem;
-                    a {
-                        display: inline-block;
-                        height: 90px;
-                        width: 100%;
-                    }
-                }
-                #email_sprite {
-                    width: 85px;
-                    background: url('images/main-sprite.png') 0 0 no-repeat;
-                }
-                #facebook_sprite {
-                    width: 70px;
-                    background: url('images/main-sprite.png') -88px 0 no-repeat;
-                }
-                #twitter_sprite {
-                    width: 70px;
-                    background: url('images/main-sprite.png') -160px 0 no-repeat;
-                }
-                #youtube_sprite {
-                    width: 70px;
-                    background: url('images/main-sprite.png') -225px 0 no-repeat;
-                }
+        //width: 30%;
+        margin: 0 1rem 0 0;
+        img {
+            height: 100%;
+            object-fit: cover !important;
+        }
+    }
+    .read_more_btn {
+        @include abide_button;
+        a {
+            font-family: $body_text;
+            font-size: 1rem;
+            color: $white;
+        }
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}
+
+aside {
+    .widget {
+        margin-top: 2rem;
+    }
+    background: url('images/stage-lights.png') 100% 100% no-repeat;
+}
+
+footer {
+    p {
+        color: $dark_blue;
+    }
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .social-buttons {
+        display: flex;
+        li {
+            display: inline-block;
+            height: 60px;
+            list-style-type: none;
+            margin-right: 1rem;
+            a {
+                display: inline-block;
+                height: 90px;
+                width: 100%;
             }
         }
+        #email_sprite {
+            width: 85px;
+            background: url('images/main-sprite.png') 0 0 no-repeat;
+        }
+        #facebook_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -88px 0 no-repeat;
+        }
+        #twitter_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -160px 0 no-repeat;
+        }
+        #youtube_sprite {
+            width: 70px;
+            background: url('images/main-sprite.png') -225px 0 no-repeat;
+        }
+    }
+}

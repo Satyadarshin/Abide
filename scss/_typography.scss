@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Bahiana&display=swap');
+$semi-transparent_oil: rgba(44, 36, 22, .5);
+$body_text: "Courier",
+courier,
+serif;
+$heading_font: 'Bahiana',
+cursive;
+
+h2,
+h3,
+h4 {
+    font-family: $heading_font;
+    color: $base_blue;
+}
+
+h2 {
+    font-size: 400%;
+    margin: 1rem 0;
+}
+
+p {
+    line-height: 1.5;
+    color: $oil;
+    font-family: $body_text;
+}
+
+ul {
+    line-height: 1.5;
+    color: $oil;
+    font-family: $body_text;
+    li {
+        margin-bottom: 1rem;
+    }
+    margin-left: -1.5rem;
+}
+
+a {
+    color: $orange;
+    text-decoration: none;
+    &:hover {
+        color: $dark_blue;
+        ;
+    }
+}

@@ -1,0 +1,45 @@
+#main_nav {
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+        flex-wrap: nowrap;
+        li {
+            a {
+                color: $base_blue;
+                &:hover {
+                    color: $orange;
+                }
+            }
+            font-size: 110%;
+            font-family: $heading_font;
+            >ul {
+                //visibility: hidden;
+                margin: -.25rem;
+                padding-left: .25rem;
+                position: absolute;
+                li {
+                    margin-right: 2rem;
+                    display: flex;
+                    position: relative;
+                    top: .5rem;
+                }
+            }
+            &:hover {
+                background: $semi-transparent_oil;
+                height: 2rem;
+                padding: 1rem;
+                border: 1px solid red;
+                >ul {
+                    border: 1px solid red !important;
+                    li {
+                        background: $semi-transparent_oil;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

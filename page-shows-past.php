@@ -45,7 +45,8 @@
 		</a>
 		<div class="">
 			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-			<?php the_excerpt(); ?>
+			<?php 
+			the_excerpt(); ?>
 			<a class="inverted" href="<?php the_permalink(); ?>">read more</a>
 		</div>
 	</div>
