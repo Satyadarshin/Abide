@@ -28,14 +28,8 @@
             endif;
         ?>
     </article>
-
-    <aside>
-    <?php get_template_part( 'navigation' ); ?>
-    <div class="widget">
-        <?php if ( is_active_sidebar( 'sidebar_1' ) ): ?>
-            <?php dynamic_sidebar(' sidebar_1' ); ?>
-        <?php endif; ?>
-    </div>
+    <aside class="sidebar_right">
+        <?php get_template_part( 'partials/sidebar' ); ?>
     </aside>
 </main>
 <?php

@@ -22,7 +22,11 @@
 		<h2><?php the_title(); ?></h2>
 	<?php 
 		endwhile; 
-		$loop = new WP_Query( array( 'post_type' => $post->post_name, 'posts_per_page' => 999, 'order' => 'DESC', 'orderby' => 'date',
+		$loop = new WP_Query( array( 
+			'post_type' => $post->post_name, 
+			'posts_per_page' => 999, 
+			'order' => 'DESC', 
+			'orderby' => 'date',
 			'tax_query' => array(
 				array(
 					'taxonomy'	=> 'show-type',
@@ -55,12 +59,8 @@
 	</div>
 	<?php endwhile; ?>
 	</article>
-    <aside>
-    <div class="widget">
-        <?php if ( is_active_sidebar( 'sidebar_1' ) ): ?>
-            <?php dynamic_sidebar(' sidebar_1' ); ?>
-        <?php endif; ?>
-    </div>
+	<aside class="sidebar_right">
+		<?php get_template_part( 'partials/sidebar' ); ?>
     </aside>
 </main>
 <?php

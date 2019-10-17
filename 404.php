@@ -22,12 +22,8 @@
         <p>Please follow the navigation above, use the serach box, or head back to the <a href="https://tessabide.com">homepage</a>.</p>
         <img src="<?php echo get_template_directory_uri(); ?>/images/cat.png" alt="Paper-cut cat" />
     </article>
-    <aside>
-        <div class="widget">
-        <?php if ( is_active_sidebar( 'sidebar1' ) ): ?>
-            <?php dynamic_sidebar(' sidebar1' ); ?>
-        <?php endif; ?>
-        </div>
+    <aside class="sidebar_right">
+        <?php get_template_part( 'partials/sidebar' ); ?>
     </aside>
 </main>
 <?php

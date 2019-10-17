@@ -1,13 +1,82 @@
 #main_nav {
-    
+    .menu-item-has-children {
+        &::after {
+            content: "\0000a0\25bc";
+            color: $base_blue;
+        }
+        &:hover:after {
+            content: "";
+        }
+        // a:hover {
+        //     padding-bottom: 5px;
+        //     background-color: $base_blue;
+        //     color: $white;
+        // }
+        ul {
+            margin-left: 0;
+            background-color: $base_blue;
+        }
+        &:hover a {
+            padding-bottom: 5px;
+            background-color: $base_blue;
+            color: $white;
+        }
+        li {
+            width: 12rem;
+            border-bottom: 1px dotted $white;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            a {
+                &:hover {
+                    color: $orange;
+                }
+                width: 100%;
+                padding-bottom: 0 !important;
+                margin-left: 1rem;
+                color: $white;
+            }
+        }
+        &:focus .sub-menu,
+        &:focus-within .sub-menu,
+        &:hover .sub-menu {
+            visibility: visible;
+            /* shows sub-menu */
+            opacity: 1;
+            z-index: 1;
+            transform: translateY(0%);
+            transition-delay: 0s, 0s, 0.3s;
+            /* this removes the transition delay so the menu will be visible while the other styles transition */
+        }
+        .sub-menu {
+            visibility: hidden;
+            /* hides sub-menu */
+            opacity: 0;
+            z-index: -1;
+            position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            transform: translateY(-5em);
+            transition: all 0.3s ease-in-out 0s, visibility 2s linear 0.3s, z-index 0s linear 0.01s;
+        }
+    }
     ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         list-style-type: none;
         flex-wrap: nowrap;
-        li {
+        .current-menu-item:not(.menu-item-has-children) {
             a {
+                border-bottom: 3px solid $oil;
+                color: $oil;
+            }
+        }
+        li {
+            margin-left: -1rem;
+            a {
+                padding: 0 .25rem;
                 color: $base_blue;
                 &:hover {
                     color: $orange;
@@ -15,30 +84,10 @@
             }
             font-size: 110%;
             font-family: $heading_font;
-            >ul {
-                //visibility: hidden;
-                margin: -.25rem;
-                padding-left: .25rem;
-                position: absolute;
-                li {
-                    margin-right: 2rem;
-                    display: flex;
-                    position: relative;
-                    top: .5rem;
-                }
-            }
-            &:hover {
-                background: $semi-transparent_oil;
-                height: 2rem;
-                padding: 1rem;
-                border: 1px solid red;
-                >ul {
-                    border: 1px solid red !important;
-                    li {
-                        background: $semi-transparent_oil;
-                        visibility: visible;
-                    }
-                }
+            ul li {
+                padding: 5px 0;
+                margin-bottom: 1px;
+                margin-left: -2.5rem;
             }
         }
     }
