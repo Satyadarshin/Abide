@@ -1,0 +1,41 @@
+.post_item {
+    h3 {
+        font-size: 200%;
+        a {
+            color: #75b1b8;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+    display: flex;
+    @include abide_flex_direction;
+    border: 1px solid silver;
+    background-color: #ececec;
+    margin-bottom: 2rem;
+    .post_intro {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .post_thumb {
+        &:hover {
+            opacity: .7;
+        }
+        margin: 0 1rem 0 0;
+        img {
+            height: 100%;
+            object-fit: cover !important;
+        }
+    }
+    .read_more_btn {
+        @include abide_button;
+        a {
+            font-family: $body_text;
+            font-size: 1rem;
+            color: $white;
+        }
+        &:hover {
+            background-color: $orange;
+        }
+    }
+}

@@ -1,4 +1,8 @@
 #main_nav {
+    // border: 1px solid red;
+    @media (min-width: 601px) {}
+    @media (max-width: 600px) {}
+    margin-top: -1.5rem;
     .menu-item-has-children {
         &::after {
             content: "\0000a0\25bc";
@@ -7,11 +11,6 @@
         &:hover:after {
             content: "";
         }
-        // a:hover {
-        //     padding-bottom: 5px;
-        //     background-color: $base_blue;
-        //     color: $white;
-        // }
         ul {
             margin-left: 0;
             background-color: $base_blue;

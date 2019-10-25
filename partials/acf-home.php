@@ -10,12 +10,12 @@
  */
 ?>
 
-<section class="home_section_1">
+<section class="primary_content">
 	<?php the_field( 'home_1' ); ?>
 </section>
-<section class="home_section_2">
+<section class="home_gallery">
 	<?php the_field( 'home_2' ); ?>
 </section>
-<section class="home_section_3">
+<section class="home_contact_capture">
 	<?php the_field( 'home_3' ); ?>
 </section>

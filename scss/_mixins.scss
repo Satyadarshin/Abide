@@ -4,4 +4,19 @@
     border: none;
     padding: .5rem 1rem;
     margin-bottom: 1rem;
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: $white;
+    &:hover {
+        background-color: $orange;
+    }
+}
+
+@mixin abide_flex_direction {
+    @media ( min-width: 601px) {
+        flex-direction: row;
+    }
+    @media ( max-width: 600px) {
+        flex-direction: column;
+    }
 }

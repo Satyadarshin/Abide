@@ -1,0 +1,43 @@
+.home_gallery {
+    padding-top: 2rem;
+    article {
+        margin: 0 2rem
+    }
+    background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
+}
+
+.home_contact_capture {
+    background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
+    padding: 5rem 0 3.5rem;
+    article {
+        @include abide_flex_direction;
+        margin: 0 2rem;
+        display: flex;
+        #mailing_list_signup {
+            flex: 1;
+            div#mc_embed_signup {
+                display: flex;
+                div.mc-field-group {
+                    display: flex;
+                    label {
+                        margin-right: .5rem;
+                        flex: 1;
+                    }
+                    input {
+                        flex: 1;
+                    }
+                    margin-bottom: 1rem;
+                }
+                input#mc-embedded-subscribe {
+                    @include abide_button
+                }
+            }
+        }
+        #contact_form {
+            border: 1px solid $base_blue;
+            border-radius: 3px;
+            padding: 0 1rem 1rem 1rem;
+            flex: 1;
+        }
+    }
+}

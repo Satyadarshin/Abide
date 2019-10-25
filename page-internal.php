@@ -16,14 +16,16 @@
 <main>
 <?php
 	if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-		<article>
-		<h2><?php the_title(); ?></h2>
+		    <div class="title_block">
+        <h2><?php the_title(); ?></h2>
+    </div>
+    <section class="primary_content">
+        <article>
 	<?php 
 		endwhile; 
 		$loop = new WP_Query( array( 'post_type' => $post->post_name, 'posts_per_page' => 999, 'order' => 'DESC', 'orderby' => 'date' ) ); 
 		while ( $loop->have_posts() ) : $loop->the_post(); 
 	?>
-
 	<div class="post_item">
 	<?php if ( has_post_thumbnail() ): ?>
 		<div class="post_thumb">
@@ -49,6 +51,7 @@
 	<aside class="sidebar_right">
 		<?php get_template_part( 'partials/sidebar' ); ?>
     </aside>
+	</section>
 </main>
 <?php
     get_footer();
