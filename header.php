@@ -22,9 +22,9 @@
         <body <?php body_class(); ?>>
         <div id="container">
             <header id="page_header">
-                <!-- <img id="cat" src="<?php echo get_template_directory_uri(); ?>/images/cat.png" alt="" /> -->
-                <h1><a href="<?php bloginfo( 'url' ); ?>"><img id="logo" src="<?php echo get_template_directory_uri(); ?>/images/main-logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
-                <!-- <img id="guitar" src="<?php echo get_template_directory_uri(); ?>/images/guitar.png" alt="" /> -->
+                <img id="cat" src="<?php echo get_template_directory_uri(); ?>/images/cat.png" alt="" />
+                <h1 id="logo" ><a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/main-logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
+                <img id="guitar" src="<?php echo get_template_directory_uri(); ?>/images/guitar.png" alt="" />
             </header>
             
     

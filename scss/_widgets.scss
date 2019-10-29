@@ -6,11 +6,18 @@
     font-family: $body_text;
     div {
         label {
+            flex: 2;
             margin-bottom: .5rem;
+        }
+        input {
+            flex: 1;
         }
         display: flex;
         flex-basis:max-content;
         flex-direction: column;
+        @media (max-width: 600px) {
+            margin: 0 2rem;
+        }
     }
     #searchsubmit {
         @include abide_button;

@@ -1,93 +1,145 @@
-#main_nav {
-    // border: 1px solid red;
-    @media (min-width: 601px) {}
-    @media (max-width: 600px) {}
-    margin-top: -1.5rem;
-    .menu-item-has-children {
-        &::after {
-            content: "\0000a0\25bc";
-            color: $base_blue;
+    #main_nav {
+        ul {
+            //margin-top: -1.5rem;
+            list-style-type: none;
+            .menu-item-has-children {
+                &::after {
+                    content: "\0000a0\25bc";
+                    color: $base_blue;
+                }
+            }
+            li {
+                font-size: 110%;
+                font-family: $heading_font;
+                margin-left: -1rem;
+                a {
+                    padding: 0 .25rem;
+                    color: $base_blue;
+                    &:hover {
+                        color: $orange;
+                    }
+                }
+                ul li {
+                    //padding: 5px 0;
+                    margin-bottom: 1px;
+                    margin-left: -2.5rem;
+                }
+            }
+            .current-menu-item:not(.menu-item-has-children) {
+                a {
+                    border-bottom: 3px solid $oil;
+                    color: $oil;
+                }
+            }
         }
-        &:hover:after {
-            content: "";
+    }
+    
+    @media (min-width: 601px) {
+        .menu-item-has-children {
+            .menu-item-has-children {
+                &:hover:before {
+                    content: "";
+                }
+            }
+            ul {
+                margin-left: 0;
+                padding: 1rem;
+                background-color: $base_blue;
+            }
+            &:hover a {
+                // margin-bottom: 15px;
+                background-color: $base_blue;
+                color: $white !important;
+            }
+            li {
+                width: 12rem;
+                border-bottom: 1px dotted red;
+                margin-left: -1.75rem;
+                &:last-of-type {
+                    border-bottom: none;
+                }
+                a {
+                    &:hover {
+                        color: $orange;
+                    }
+                    width: 100%;
+                    padding-bottom: 0 !important;
+                }
+            }
+            &:focus .sub-menu,
+            &:focus-within .sub-menu,
+            &:hover .sub-menu {
+                margin-top: -.25rem;
+                visibility: visible;
+                /* shows sub-menu */
+                opacity: 1;
+                z-index: 1;
+                transform: translateY(0%);
+                transition-delay: 0s, 0s, 0.3s;
+                /* this removes the transition delay so the menu will be visible while the other styles transition */
+            }
+            .sub-menu {
+                visibility: hidden;
+                /* hides sub-menu */
+                opacity: 0;
+                z-index: -1;
+                position: absolute;
+                transform: translateY(-5em);
+                transition: all 0.3s ease-in-out 0s, visibility 2s linear 0.3s, z-index 0s linear 0.01s;
+            }
         }
         ul {
-            margin-left: 0;
-            background-color: $base_blue;
-        }
-        &:hover a {
-            padding-bottom: 5px;
-            background-color: $base_blue;
-            color: $white;
-        }
-        li {
-            width: 12rem;
-            border-bottom: 1px dotted $white;
-            &:last-of-type {
-                border-bottom: none;
-            }
-            a {
-                &:hover {
-                    color: $orange;
-                }
-                width: 100%;
-                padding-bottom: 0 !important;
-                margin-left: 1rem;
-                color: $white;
-            }
-        }
-        &:focus .sub-menu,
-        &:focus-within .sub-menu,
-        &:hover .sub-menu {
-            visibility: visible;
-            /* shows sub-menu */
-            opacity: 1;
-            z-index: 1;
-            transform: translateY(0%);
-            transition-delay: 0s, 0s, 0.3s;
-            /* this removes the transition delay so the menu will be visible while the other styles transition */
-        }
-        .sub-menu {
-            visibility: hidden;
-            /* hides sub-menu */
-            opacity: 0;
-            z-index: -1;
-            position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 100%;
-            transform: translateY(-5em);
-            transition: all 0.3s ease-in-out 0s, visibility 2s linear 0.3s, z-index 0s linear 0.01s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: nowrap;
         }
     }
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        list-style-type: none;
-        flex-wrap: nowrap;
-        .current-menu-item:not(.menu-item-has-children) {
-            a {
-                border-bottom: 3px solid $oil;
-                color: $oil;
-            }
+    
+    @media ( max-width: 600px) {
+        #menu-infants_menu {
+            padding-top: 1rem;
         }
-        li {
-            margin-left: -1rem;
-            a {
-                padding: 0 .25rem;
-                color: $base_blue;
-                &:hover {
-                    color: $orange;
-                }
-            }
-            font-size: 110%;
-            font-family: $heading_font;
-            ul li {
-                padding: 5px 0;
-                margin-bottom: 1px;
+        ul {
+            margin-left: -1.5rem;
+            padding-bottom: 0;
+            border-top: 1px dotted;
+            li {
+                margin-top: -1rem;
+                padding-top: 1rem;
                 margin-left: -2.5rem;
+                padding-left: 1rem;
+                border-bottom: 1px dotted $oil;
+                padding-bottom: .5rem;
+                &:focus,
+                &:hover {
+                    background-color: $base_blue;
+                    a {
+                        color: $white !important;
+                    }
+                }
+            }
+            .sub-menu {
+                border-top: 1px dotted $oil;
+                margin-top: .5rem;
+                margin-bottom: -.65rem;
+                margin-left: -1rem;
+                li {
+                    border-bottom: none;
+                    &:focus,
+                    &:hover {
+                        background-color: $dark_blue;
+                    }
+                    margin-top: -.1rem;
+                    // border: 1px solid red;
+                    padding: .75rem 0;
+                    &:first-of-type {
+                        border-bottom: 1px dotted $oil;
+                    }
+                    a {
+                        margin-left: 3rem;
+                    }
+                }
             }
         }
     }
-}
