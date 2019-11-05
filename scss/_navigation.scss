@@ -1,69 +1,73 @@
-    #main_nav {
-        ul {
-            //margin-top: -1.5rem;
-            list-style-type: none;
-            .menu-item-has-children {
-                &::after {
-                    content: "\0000a0\25bc";
-                    color: $base_blue;
+#main_nav {
+    ul {
+        list-style-type: none;
+        .menu-item-has-children>a {
+            &::after {
+                content: "\0000a0\25bc";
+                color: $base_blue;
+            }
+        }
+        li {
+            font-size: 110%;
+            font-family: $heading_font;
+            margin-left: -1rem;
+            a {
+                padding: 0 .25rem;
+                color: $base_blue;
+                &:hover {
+                    color: $orange;
                 }
             }
-            li {
-                font-size: 110%;
-                font-family: $heading_font;
-                margin-left: -1rem;
-                a {
-                    padding: 0 .25rem;
-                    color: $base_blue;
-                    &:hover {
-                        color: $orange;
-                    }
-                }
-                ul li {
-                    //padding: 5px 0;
-                    margin-bottom: 1px;
-                    margin-left: -2.5rem;
-                }
+            ul li {
+                margin-bottom: 1px;
             }
-            .current-menu-item:not(.menu-item-has-children) {
-                a {
-                    border-bottom: 3px solid $oil;
-                    color: $oil;
-                }
+        }
+        .current-menu-item:not(.menu-item-has-children) {
+            a {
+                border-bottom: 3px solid $oil;
+                color: $oil;
             }
         }
     }
-    
     @media (min-width: 601px) {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+        }
         .menu-item-has-children {
-            .menu-item-has-children {
-                &:hover:before {
-                    content: "";
+            .current-menu-item a {
+                color: $oil !important;
+                &:hover {
+                    border-bottom: 3px solid $orange !important;
                 }
+            }
+            &:hover:before {
+                content: "";
             }
             ul {
                 margin-left: 0;
-                padding: 1rem;
+                padding-left: 1rem;
                 background-color: $base_blue;
             }
             &:hover a {
-                // margin-bottom: 15px;
                 background-color: $base_blue;
-                color: $white !important;
+                color: $white;
             }
             li {
+                color: $white;
                 width: 12rem;
-                border-bottom: 1px dotted red;
-                margin-left: -1.75rem;
+                margin-right: -2rem;
+                border-bottom: 1px dotted $white;
                 &:last-of-type {
                     border-bottom: none;
                 }
                 a {
+                    color: $white !important;
                     &:hover {
-                        color: $orange;
+                        color: $orange !important;
                     }
-                    width: 100%;
-                    padding-bottom: 0 !important;
                 }
             }
             &:focus .sub-menu,
@@ -88,33 +92,24 @@
                 transition: all 0.3s ease-in-out 0s, visibility 2s linear 0.3s, z-index 0s linear 0.01s;
             }
         }
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-        }
     }
-    
     @media ( max-width: 600px) {
         #menu-infants_menu {
             padding-top: 1rem;
         }
         ul {
-            margin-left: -1.5rem;
             padding-bottom: 0;
             border-top: 1px dotted;
             li {
                 margin-top: -1rem;
                 padding-top: 1rem;
-                margin-left: -2.5rem;
                 padding-left: 1rem;
                 border-bottom: 1px dotted $oil;
                 padding-bottom: .5rem;
                 &:focus,
                 &:hover {
                     background-color: $base_blue;
-                    a {
+                    a:not(.current-menu-item) {
                         color: $white !important;
                     }
                 }
@@ -123,7 +118,7 @@
                 border-top: 1px dotted $oil;
                 margin-top: .5rem;
                 margin-bottom: -.65rem;
-                margin-left: -1rem;
+                margin-left: -2.5rem;
                 li {
                     border-bottom: none;
                     &:focus,
@@ -143,3 +138,4 @@
             }
         }
     }
+}

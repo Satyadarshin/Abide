@@ -10,7 +10,8 @@
     background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
     padding: 5rem 0 3.5rem;
     article {
-        @include abide_flex_direction;
+        @include abide_flex_direction(601px,
+        600px);
         margin: 0 2rem;
         display: flex;
         #mailing_list_signup {

@@ -9,7 +9,7 @@
         }
     }
     display: flex;
-    @include abide_flex_direction;
+    @include abide_flex_direction(601px, 600px);
     border: 1px solid silver;
     background-color: #ececec;
     margin-bottom: 2rem;
@@ -18,12 +18,20 @@
         margin-right: 1rem;
     }
     .post_thumb {
+        @media ( max-width: 830px) {
+            width: 100%;
+        }
         &:hover {
             opacity: .7;
         }
         margin: 0 1rem 0 0;
         img {
-            height: 100%;
+            @media ( min-width: 831px) {
+                height: 100%;
+            }
+            @media ( max-width: 830px) {
+                width: 100%;
+            }
             object-fit: cover !important;
         }
     }

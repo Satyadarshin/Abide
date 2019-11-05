@@ -6,8 +6,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include abide_flex_direction;
+    @include abide_flex_direction(601px, 600px);
     .social-buttons {
+        flex-direction: row;
         display: flex;
         li {
             display: inline-block;

@@ -12,11 +12,11 @@
     }
 }
 
-@mixin abide_flex_direction {
-    @media ( min-width: 601px) {
+@mixin abide_flex_direction($large, $small) {
+    @media ( min-width: $large) {
         flex-direction: row;
     }
-    @media ( max-width: 600px) {
+    @media ( max-width: $small) {
         flex-direction: column;
     }
 }
