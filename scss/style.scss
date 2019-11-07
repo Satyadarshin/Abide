@@ -130,12 +130,23 @@ main {
     min-height: 50vh;
     background: url('images/panel-tile.jpg') 0 0 repeat;
     .primary_content {
+        overflow: auto; // Part of a fallback for older browsers that don't support grid.
         display: grid;
         grid-template-columns: [left-border] 3fr [mid-column] 1fr [right-border];
         article {
+            // Part of a fallback for older browsers that don't support grid.
+            float: left;
+            clear: left;
+            // width: 60%;
+            // End fallback.
             grid-area: payload;
         }
         aside {
+            // Part of a fallback for older browsers that don't support grid.
+            float: right;
+            clear: right;
+            // width: 30%;
+            // End fallback.
             grid-area: sidebar;
         }
         @media (min-width: 601px) {

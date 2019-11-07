@@ -47,6 +47,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/images\/birds2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 180975,
+		"inputAbbreviatedPath": "\/images\/birds2.png",
+		"outputAbbreviatedPath": "\/images\/birds2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/cat.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -58,6 +69,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/guitar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71380,
+		"inputAbbreviatedPath": "\/images\/guitar.png",
+		"outputAbbreviatedPath": "\/images\/guitar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/imorted_images\/structure\/birds1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -65,17 +87,6 @@
 		"initialSize": 82274,
 		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/birds1.png",
 		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/birds1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/imorted_images\/structure\/birds2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 180975,
-		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/birds2.png",
-		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/birds2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -98,28 +109,6 @@
 		"initialSize": 88902,
 		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/branches.png",
 		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/branches.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/imorted_images\/structure\/cat.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 50346,
-		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/cat.png",
-		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/cat.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/imorted_images\/structure\/guitar.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 71380,
-		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/guitar.png",
-		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/guitar.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -186,17 +175,6 @@
 		"initialSize": 30126,
 		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/mermaid.png",
 		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/mermaid.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/imorted_images\/structure\/oak.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 61253,
-		"inputAbbreviatedPath": "\/images\/imorted_images\/structure\/oak.png",
-		"outputAbbreviatedPath": "\/images\/imorted_images\/structure\/oak.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -333,6 +311,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/oak.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61253,
+		"inputAbbreviatedPath": "\/images\/oak.png",
+		"outputAbbreviatedPath": "\/images\/oak.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/panel-tile.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -360,6 +349,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/nav.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/nav.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -427,6 +425,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/screenshot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34050,
+		"inputAbbreviatedPath": "\/screenshot.png",
+		"outputAbbreviatedPath": "\/screenshot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/scss\/_colors.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -452,6 +461,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/scss\/_custom-post-types.scss",
 		"outputAbbreviatedPath": "\/css\/_custom-post-types.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/scss\/_footer.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/_footer.scss",
+		"outputAbbreviatedPath": "\/css\/_footer.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
