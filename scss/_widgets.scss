@@ -2,6 +2,10 @@
     Wordpress' built-in search widget
 */
 
+.widget {
+    margin-top: 2rem;
+}
+
 #searchform {
     font-family: $body_text;
     div {

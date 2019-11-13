@@ -112,17 +112,17 @@ body {
         min-height: 55rem;
         background: url('images/stage-lights.png') 100% 99.7% no-repeat;
     }
-    &::after {
-        z-index: 10;
-        width: 250px;
-        height: 250px;
-        position: relative;
-        display: block;
-        top: 0%;
-        left: 85%;
-        content: '';
-        background: url('images/oak.png') 50% 50% no-repeat;
-    }
+    // &::after {
+    //     z-index: 10;
+    //     width: 250px;
+    //     height: 250px;
+    //     position: relative;
+    //     display: block;
+    //     top: 0%;
+    //     left: 85%;
+    //     content: '';
+    //     background: url('images/oak.png') 50% 50% no-repeat;
+    //}
 }
 
 main {
@@ -137,7 +137,9 @@ main {
             // Part of a fallback for older browsers that don't support grid.
             float: left;
             clear: left;
-            // width: 60%;
+            @supports not ( display: grid) {
+                width: 60%;
+            }
             // End fallback.
             grid-area: payload;
         }
@@ -145,7 +147,9 @@ main {
             // Part of a fallback for older browsers that don't support grid.
             float: right;
             clear: right;
-            // width: 30%;
+            @supports not ( display: grid) {
+                width: 30%;
+            }
             // End fallback.
             grid-area: sidebar;
         }

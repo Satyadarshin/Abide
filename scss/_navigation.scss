@@ -30,6 +30,9 @@
         }
     }
     @media (min-width: 601px) {
+        #trigger {
+            display: none;
+        }
         ul {
             display: flex;
             flex-direction: column;
@@ -94,17 +97,48 @@
         }
     }
     @media ( max-width: 600px) {
+        #trigger {
+            #hamburger {
+                cursor: pointer;
+                background-color: $white;
+                border-radius: 1rem;
+                display: block;
+                color: $base_blue;
+                float: right;
+                height: 2rem;
+                padding-top: .4rem;
+                padding-left: .3rem;
+                width: 2rem;
+                text-align: center;
+                margin: .5rem;
+                &:focus,
+                &:hover {
+                    color: $white !important;
+                    background-color: $dark_blue !important;
+                }
+            }
+            background: $base_blue;
+            height: 3rem;
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: -1rem;
+        }
+        .hide {
+            //Inserted by jQuery as part of the navigation sub-menu dropdown
+            display: none;
+        }
         #menu-infants_menu {
             padding-top: 1rem;
         }
         ul {
             padding-bottom: 0;
-            border-top: 1px dotted;
+            //border-top: 1px dotted;
             li {
                 margin-top: -1rem;
                 padding-top: 1rem;
                 padding-left: 1rem;
-                border-bottom: 1px dotted $oil;
+                border-bottom: 1px dotted $base_blue;
                 padding-bottom: .5rem;
                 &:focus,
                 &:hover {
@@ -115,7 +149,8 @@
                 }
             }
             .sub-menu {
-                border-top: 1px dotted $oil;
+                border-top: 1px dotted $base_blue;
+                ;
                 margin-top: .5rem;
                 margin-bottom: -.65rem;
                 margin-left: -2.5rem;
@@ -129,7 +164,8 @@
                     // border: 1px solid red;
                     padding: .75rem 0;
                     &:first-of-type {
-                        border-bottom: 1px dotted $oil;
+                        border-bottom: 1px dotted $$base_blue;
+                        ;
                     }
                     a {
                         margin-left: 3rem;
