@@ -23,10 +23,9 @@
     </div>
     <section class="primary_content">
         <article>
-	<?php 
-		endwhile; 
-		$loop = new WP_Query( array( 
-			'post_type' => $post->post_name, 
+	<?php endwhile; 
+		 $loop = new WP_Query( array( 
+			'post_type' => 'shows', 
 			'posts_per_page' => 999, 
 			'order' => 'DESC', 
 			'orderby' => 'date',

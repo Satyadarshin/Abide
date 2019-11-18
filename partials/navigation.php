@@ -8,7 +8,7 @@
  */
 ?>
 <nav id="main_nav">
-    <div id="trigger"><span id="hamburger" class="dashicons dashicons-menu-alt3">&nbsp;</span></div>
+    <div id="trigger"><span id="hamburger">&#9776;</span></div>
     <?php 
         $args = array( 
             'menu' => 'mainnav', 
