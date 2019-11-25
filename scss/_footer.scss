@@ -2,7 +2,7 @@ footer {
     p {
         color: $dark_blue;
     }
-    height: 8vh;
+    min-height: 8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,19 +45,15 @@ footer {
         }
     }
     #credits {
-        text-align: center;
+        margin-right: 2rem;
         display: flex;
-        @media ( min-width: 831px) {
-            flex-direction: row;
-            #programmer {
-                &::before {
-                    content: " |";
-                }
-            }
+        flex-direction: column;
+        @media ( min-width: 601px) {
+            text-align: right;
         }
-        @media ( max-width: 830px) {
-            margin-top: 4rem;
-            flex-direction: column;
+        @media ( max-width: 600px) {
+            margin-top: 1rem;
+            text-align: center;
         }
     }
 }

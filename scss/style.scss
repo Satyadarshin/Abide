@@ -56,15 +56,22 @@ body {
     border-bottom: none;
     background: url('images/line-horiz-top.png') 100% 100% no-repeat;
     margin-bottom: -1rem;
+    // @media (min-height: 1140px) {
+    //     height: 25vh;
+    // }
+    // @media (max-height: 1139.5px) {
+    //     height: 50vh;
+    // }
     @media (min-width: 601px) {
         display: flex;
-        height: 25vh;
+        align-items: flex-start;
         #cat {
+            padding: 0;
             object-fit: contain;
             margin-top: -1rem;
         }
         #logo {
-            margin-top: -1.5rem;
+            margin-top: -1rem;
         }
         #guitar {
             object-fit: contain;
@@ -112,17 +119,6 @@ body {
         min-height: 55rem;
         background: url('images/stage-lights.png') 100% 99.7% no-repeat;
     }
-    // &::after {
-    //     z-index: 10;
-    //     width: 250px;
-    //     height: 250px;
-    //     position: relative;
-    //     display: block;
-    //     top: 0%;
-    //     left: 85%;
-    //     content: '';
-    //     background: url('images/oak.png') 50% 50% no-repeat;
-    //}
 }
 
 main {
