@@ -37,17 +37,6 @@ body {
 }
 
 #container {
-    // &::before {
-    //     z-index: 10;
-    //     width: 550px;
-    //     height: 550px;
-    //     position: relative;
-    //     display: block;
-    //     top: 50%;
-    //     left: 0;
-    //     content: '';
-    //     background: url('images/birds2.png') 50% -150% no-repeat;
-    // }
     max-width: 900px;
     margin: 0 auto;
 }
@@ -56,12 +45,6 @@ body {
     border-bottom: none;
     background: url('images/line-horiz-top.png') 100% 100% no-repeat;
     margin-bottom: -1rem;
-    // @media (min-height: 1140px) {
-    //     height: 25vh;
-    // }
-    // @media (max-height: 1139.5px) {
-    //     height: 50vh;
-    // }
     @media (min-width: 601px) {
         display: flex;
         align-items: flex-start;
@@ -126,6 +109,10 @@ main {
     min-height: 50vh;
     background: url('images/panel-tile.jpg') 0 0 repeat;
     .primary_content {
+        h3 {
+            font-size: 200%;
+            margin-bottom: 1rem;
+        }
         overflow: auto; // Part of a fallback for older browsers that don't support grid.
         display: grid;
         grid-template-columns: [left-border] 3fr [mid-column] 1fr [right-border];
