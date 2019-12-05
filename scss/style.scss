@@ -37,73 +37,14 @@ body {
 }
 
 #container {
+    background: url('images/header_backdrop.png') 0 0 no-repeat;
     max-width: 900px;
-    margin: 0 auto;
+    margin: -1rem auto;
 }
 
-#page_header {
-    border-bottom: none;
-    background: url('images/line-horiz-top.png') 100% 100% no-repeat;
-    margin-bottom: -1rem;
-    @media (min-width: 601px) {
-        display: flex;
-        align-items: flex-start;
-        #cat {
-            padding: 0;
-            object-fit: contain;
-            margin-top: -1rem;
-        }
-        #logo {
-            margin-top: -1rem;
-        }
-        #guitar {
-            object-fit: contain;
-            margin-top: -1.5rem;
-        }
-    }
-    @media (max-width: 600px) {
-        height: 55vh;
-        #cat {
-            display: none;
-        }
-        #logo {
-            display: block;
-            margin: -1rem auto 0 auto;
-        }
-        #guitar {
-            display: none;
-        }
-    }
-    img {
-        display: block;
-        width: auto;
-    }
-}
-
-.title_block {
-    margin: 0 2rem;
-}
-
-.banner_image {
-    border: 1px solid grey;
-    img {
-        width: 100%;
-        height: 35rem;
-        margin-bottom: -.45rem;
-    }
-    .object-fit_me {
-        object-fit: cover;
-        object-position: 0 0;
-    }
-}
-
-.sidebar_right {
-    @media (min-width: 601px) {
-        min-height: 55rem;
-        background: url('images/stage-lights.png') 100% 99.7% no-repeat;
-    }
-}
-
+@import 'header';
+@import 'sidebar';
+@import 'media';
 main {
     margin: 0;
     min-height: 50vh;
@@ -120,7 +61,7 @@ main {
             // Part of a fallback for older browsers that don't support grid.
             float: left;
             clear: left;
-            @supports not ( display: grid) {
+            @supports not (display: grid) {
                 width: 60%;
             }
             // End fallback.
@@ -130,7 +71,7 @@ main {
             // Part of a fallback for older browsers that don't support grid.
             float: right;
             clear: right;
-            @supports not ( display: grid) {
+            @supports not (display: grid) {
                 width: 30%;
             }
             // End fallback.
@@ -156,6 +97,25 @@ main {
             grid-template-areas: "sidebar sidebar" "payload payload";
         }
     }
+    #search_results {
+        li {
+            h3 {
+                @include abide_panel_header;
+            }
+            padding-top: -2rem;
+            margin-left: -1rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            border: 1px solid $mid_grey;
+            background-color: $light_grey;
+            list-style-type: none;
+        }
+    }
+}
+
+.read_more_btn {
+    width: 8rem;
+    @include abide_button;
 }
 
 @import 'footer';

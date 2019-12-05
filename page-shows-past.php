@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying current shows.
+ * Template for displaying past shows.
  *
  * Pulls together all of the template parts needed to display complete page content.
  *

@@ -24,6 +24,7 @@
         }
     }
     #searchsubmit {
+        width: 8rem;
         @include abide_button;
     }
 }

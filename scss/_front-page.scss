@@ -1,3 +1,16 @@
+.banner_image {
+    border: 1px solid grey;
+    img {
+        width: 100%;
+        height: 35rem;
+        margin-bottom: -.45rem;
+    }
+    .object-fit_me {
+        object-fit: cover;
+        object-position: 0 0;
+    }
+}
+
 .home_gallery {
     padding-top: 2rem;
     article {
@@ -10,35 +23,72 @@
     background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
     padding: 5rem 0 3.5rem;
     article {
+        @media (min-width: 601px) {
+            background: url('images/birds.png') 0 90% no-repeat;
+            background-size: 40%;
+        }
         @include abide_flex_direction(601px,
         600px);
         margin: 0 2rem;
         display: flex;
         #mailing_list_signup {
+            @media (min-width: 601px) {
+                margin-right: .5rem;
+            }
+            font-family: $body_text;
             flex: 1;
-            div#mc_embed_signup {
+            div.mc-field-group {
                 display: flex;
-                div.mc-field-group {
-                    display: flex;
-                    label {
-                        margin-right: .5rem;
-                        flex: 1;
-                    }
-                    input {
-                        flex: 1;
-                    }
-                    margin-bottom: 1rem;
+                label {
+                    margin-right: .5rem;
+                    flex: 1;
                 }
-                input#mc-embedded-subscribe {
-                    @include abide_button
+                input {
+                    -webkit-appearance: none;
+                    width: 100%;
+                    height: 1.5rem;
+                    border: 1px solid $mid-grey;
+                    flex: 2;
                 }
+                margin-bottom: 1rem;
+            }
+            #mc_embed_signup_scroll div {
+                margin-bottom: 1rem;
+            }
+            input#mc-embedded-subscribe {
+                width: 8rem;
+                @include abide_button
             }
         }
         #contact_form {
-            border: 1px solid $base_blue;
+            @media (min-width: 601px) {
+                margin-left: .5rem;
+            }
+            border: 1px solid $mid-grey;
             border-radius: 3px;
             padding: 0 1rem 1rem 1rem;
             flex: 1;
+            form {
+                p {
+                    input {
+                        -webkit-appearance: none;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    .wpcf7-text {
+                        border: 1px solid $mid-grey;
+                        height: 1.5rem;
+                        width: 100%;
+                    }
+                    .wpcf7-textarea {
+                        width: 100%;
+                    }
+                }
+                input[type="submit"] {
+                    width: 8rem;
+                    @include abide_button
+                }
+            }
         }
     }
 }

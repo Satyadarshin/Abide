@@ -1,17 +1,11 @@
 .post_item {
     h3 {
-        font-size: 200%;
-        a {
-            color: #75b1b8;
-            &:hover {
-                color: $orange;
-            }
-        }
+        @include abide_panel_header;
     }
     display: flex;
     @include abide_flex_direction(601px, 600px);
-    border: 1px solid silver;
-    background-color: #ececec;
+    border: 1px solid $mid_grey;
+    background-color: $light_grey;
     margin-bottom: 2rem;
     .post_intro {
         margin-left: 1rem;
@@ -33,17 +27,6 @@
                 width: 100%;
             }
             object-fit: cover !important;
-        }
-    }
-    .read_more_btn {
-        @include abide_button;
-        a {
-            font-family: $body_text;
-            font-size: 1rem;
-            color: $white;
-        }
-        &:hover {
-            background-color: $orange;
         }
     }
 }

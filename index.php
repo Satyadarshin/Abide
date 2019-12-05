@@ -1,5 +1,7 @@
 <?php
 /**
+ * Template name: Static page
+ * 
  * The default template for displaying the content.
  *
  * Pulls together all of the template parts needed to display complete page content.
@@ -23,17 +25,17 @@
     </div>
     <section class="primary_content">
         <article>
-        <?php
-            the_content();
-            endwhile;
-            else :
-                echo '<p>Sorry buddy, no content to display.</p>';
-            endif;
-        ?>
-    </article>
-    <aside class="sidebar_right">
-        <?php get_template_part( 'partials/sidebar' ); ?>
-    </aside>
+            <?php
+                the_content();
+                endwhile;
+                else :
+                    echo '<p>Sorry buddy, no content to display.</p>';
+                endif;
+            ?>
+        </article>
+        <aside class="sidebar_right">
+            <?php get_template_part( 'partials/sidebar' ); ?>
+        </aside>
     </section>
 </main>
 <?php

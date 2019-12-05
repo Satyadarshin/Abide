@@ -26,7 +26,7 @@
 	<?php 
 		endwhile; 
 		$loop = new WP_Query( array( 
-			'post_type' => $post->post_name, 
+			'post_type' => $post->post_name,  
 			'posts_per_page' => 999, 
 			'order' => 'DESC', 
 			'orderby' => 'date',

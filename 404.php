@@ -1,7 +1,7 @@
 
 <?php
 /**
- * The default template for displaying the content.
+ * The default template for displaying 404 error content.
  *
  * Pulls together all of the template parts needed to display a 404 error page.
  *

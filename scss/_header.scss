@@ -1,0 +1,45 @@
+#page_header {
+    border-bottom: none;
+    background: url('images/line-horiz-top.png') 100% 100% no-repeat;
+    margin-bottom: -1rem;
+    @media (min-width: 601px) {
+        display: flex;
+        align-items: flex-start;
+        #cat {
+            padding: 0;
+            object-fit: contain;
+            margin-top: -1rem;
+        }
+        #logo {
+            margin-top: -1rem;
+        }
+        #guitar {
+            object-fit: contain;
+            margin-top: -1.5rem;
+        }
+    }
+    @media (max-width: 600px) {
+        height: 55vh;
+        #cat {
+            display: none;
+        }
+        #logo {
+            img {
+                margin-top: -1.5rem;
+                margin-left: 10%;
+            }
+            display: block;
+        }
+        #guitar {
+            display: none;
+        }
+    }
+    img {
+        display: block;
+        width: auto;
+    }
+}
+
+.title_block {
+    margin: 0 2rem;
+}

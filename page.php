@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Custom Post
+ Template Name: Default page 
  *
  * Outputs custom post type content generated under Custom Post Type UI.
  *
