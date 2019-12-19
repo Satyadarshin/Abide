@@ -1,3 +1,10 @@
+.salutation {
+    position: relative;
+    z-index: 10;
+    display: block;
+    margin: 0 auto -3.5rem;
+}
+
 .banner_image {
     border: 1px solid grey;
     img {
@@ -7,7 +14,7 @@
     }
     .object-fit_me {
         object-fit: cover;
-        object-position: 0 0;
+        object-position: 50% 0;
     }
 }
 
