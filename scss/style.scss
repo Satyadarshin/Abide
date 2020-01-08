@@ -68,9 +68,6 @@ main {
             }
             // End fallback.
             grid-area: payload;
-            p:not(:first-of-type) {
-                text-indent: 1.5rem;
-            }
         }
         aside {
             // Part of a fallback for older browsers that don't support grid.

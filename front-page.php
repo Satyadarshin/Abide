@@ -19,7 +19,7 @@
     </div>
     <section class="primary_content">
         <article>
-            <img class="salutation" src="http://localhost:8888/TessaBide/working/wp-content/themes/Abide/images/hello.png" alt="Cut-out word 'hello'">
+            <img class="salutation" src=" <?php  echo get_template_directory_uri(); ?>/images/hello.png" alt="Cut-out word 'hello'">
             <div class="banner_image">    
                 <img class="object-fit_me"  src="https://tessabide.com/wp-content/uploads/2019/12/SelfishGiantOmnibusTheatre.72dpi.jpg" alt="Tessa Bide, theatremaker, playing the ukelele" />
             </div>
