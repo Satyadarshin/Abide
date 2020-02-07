@@ -31,7 +31,7 @@
     padding: 5rem 0 3.5rem;
     article {
         @media (min-width: 601px) {
-            background: url('images/birds.png') 0 90% no-repeat;
+            background: url('images/mermaid.png') 0 60% no-repeat;
             background-size: 40%;
         }
         @include abide_flex_direction(601px,
@@ -54,7 +54,7 @@
                     -webkit-appearance: none;
                     width: 100%;
                     height: 1.5rem;
-                    border: 1px solid $mid-grey;
+                    border: 1px solid $mid_grey;
                     flex: 2;
                 }
                 margin-bottom: 1rem;
@@ -71,7 +71,7 @@
             @media (min-width: 601px) {
                 margin-left: .5rem;
             }
-            border: 1px solid $mid-grey;
+            border: 1px solid $mid_grey;
             border-radius: 3px;
             padding: 0 1rem 1rem 1rem;
             flex: 1;
@@ -83,7 +83,7 @@
                     display: flex;
                     flex-direction: column;
                     .wpcf7-text {
-                        border: 1px solid $mid-grey;
+                        border: 1px solid $mid_grey;
                         height: 1.5rem;
                         width: 100%;
                     }

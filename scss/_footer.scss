@@ -12,6 +12,8 @@ footer {
         height: 65px;
         flex-direction: row;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         div {
             display: inline-block;
             height: 60px;
@@ -43,6 +45,11 @@ footer {
             height: 70px;
             background: url('images/main-sprite.png') -225px 0 no-repeat;
         }
+        #instagram_sprite {
+            width: 70px;
+            height: 70px;
+            background: url('images/main-sprite.png') -300px 0 no-repeat;
+        }
     }
     #credits {
         margin-right: 2rem;
@@ -52,7 +59,7 @@ footer {
             text-align: right;
         }
         @media ( max-width: 600px) {
-            margin-top: 1rem;
+            margin-top: 6rem;
             text-align: center;
         }
     }

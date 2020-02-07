@@ -28,7 +28,13 @@ h2 {
 h4 {
     font-family: $body_text;
     font-size: 120%;
-    margin-bottom: -.75rem;
+    @media (min-width: 601px) {
+        margin-bottom: -.75rem;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 0;
+        margin-left: .5rem;
+    }
 }
 
 p {
@@ -58,9 +64,14 @@ a {
 
 .primary_content {
     article {
+        // The object here is to indent all second and upwards paragraphs. 
         @media (max-width: 600px) {
             p:not(:first-of-type) {
                 text-indent: 1.5rem;
+            }
+            h4~p,
+            h3~p {
+                text-indent: 0 !important;
             }
         }
     }
