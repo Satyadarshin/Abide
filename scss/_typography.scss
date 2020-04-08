@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Bahiana&display=swap');
-$semi-transparent_oil: rgba(44,
-36,
-22,
-.5);
-$body_text: "Courier",
-courier,
-serif;
-$heading_font: 'Bahiana',
-cursive;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+$semi-transparent_oil: rgba(44,36,22,.5);
+$body_text: 'Roboto Slab', serif;
+$heading_font: 'Bahiana', cursive;
 h2,
 h3 {
     font-family: $heading_font;
@@ -62,17 +57,13 @@ a {
     }
 }
 
-.primary_content {
-    article {
-        // The object here is to indent all second and upwards paragraphs. 
-        @media (max-width: 600px) {
-            p:not(:first-of-type) {
-                text-indent: 1.5rem;
-            }
-            h4~p,
-            h3~p {
-                text-indent: 0 !important;
-            }
-        }
-    }
-}
+// .primary_content {
+//     article {
+//         // The object here is to indent all second and upwards paragraphs. 
+//         @media (max-width: 600px) {
+//             p~p {
+//                 text-indent: 1rem !important;
+//             }
+//         }
+//     }
+// }
