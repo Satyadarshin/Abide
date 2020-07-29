@@ -25,19 +25,16 @@
         <article>
 	<?php 
 		endwhile; 
-		$loop = new WP_Query( array( 
-			'post_type' => $post->post_name,  
-			'posts_per_page' => 999, 
-			'order' => 'DESC', 
-			'orderby' => 'date',
-			'tax_query' => array(
-				array(
-					'taxonomy'	=> 'show-type',
-					'field'		=> 'slug',
-					'terms' 	=> 'past-show',
-					'operator'	=> 'NOT IN'
-				),
-			),
+		$loop = new WP_Query( array( 'post_type' => $post->post_name, 'posts_per_page' => 999, 'order' => 'DESC', 'orderby' => 'date',
+
+							'tax_query' => array(
+								array(
+									'taxonomy' => 'show-type',
+									'field'    => 'slug',
+									'terms' => 'past-show',
+									'operator' => 'NOT IN',
+								),
+							),
 		) ); 
 		while ( $loop->have_posts() ) : $loop->the_post(); 
 	?>

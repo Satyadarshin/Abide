@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying past shows.
+ * Template for displaying current shows.
  *
  * Pulls together all of the template parts needed to display complete page content.
  *
@@ -18,23 +18,24 @@
 		if ( have_posts() )  ;
 		while ( have_posts() ) : the_post(); 
 	?>
-  <div class="title_block">
+	  <div class="title_block">
         <h2><?php the_title(); ?></h2>
     </div>
     <section class="primary_content">
         <article>
-	<?php endwhile; 
-		$loop = new WP_Query( 
-			array( 
-			'post_type' => 'shows', 
+	<?php 
+		endwhile; 
+		$loop = new WP_Query( array( 
+			'post_type' => $post->post_name,  
 			'posts_per_page' => 999, 
 			'order' => 'DESC', 
 			'orderby' => 'date',
 			'tax_query' => array(
 				array(
-					'taxonomy' => 'show-type',
-					'field'    => 'slug',
-					'terms' => 'past-show',
+					'taxonomy'	=> 'show-type',
+					'field'		=> 'slug',
+					'terms'     => array('current-show', 'past-show'),
+					//'operator'	=> 'NOT IN'
 				),
 			),
 		) ); 

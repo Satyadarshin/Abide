@@ -58,17 +58,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/broder.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 180535,
-		"inputAbbreviatedPath": "\/images\/broder.png",
-		"outputAbbreviatedPath": "\/images\/broder.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/cat.png": {
 		"fileType": 32768,
 		"ignore": 0,
