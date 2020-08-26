@@ -1,0 +1,44 @@
+.protection-login {
+    input {
+        -webkit-appearance: none;
+    }
+    border: 1px solid $mid_grey;
+    background-color: $light_grey;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @media (max-width: 600px) {
+        margin: 0 5px 2rem;
+    }  
+    [name="post_password"] {
+        border: 1px solid $mid_grey;
+        margin-right: 0.5rem;
+        height: 1.5rem;
+        width: 50%;
+    }
+    [type="submit"] {
+        width: 8rem;
+        @include abide_button;
+    }
+}
+
+// form {
+//     p {
+//         input {
+//             -webkit-appearance: none;
+//         }
+//         display: flex;
+//         flex-direction: column;
+//         .wpcf7-text {
+//             border: 1px solid $mid_grey;
+//             height: 1.5rem;
+//             width: 100%;
+//         }
+//         .wpcf7-textarea {
+//             width: 100%;
+//         }
+//     }
+//     input[type="submit"] {
+//         width: 8rem;
+//         @include abide_button
+//     }
+// }

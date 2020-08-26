@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Front Page
+ Template Name: Front page
  *
  * Outputs custom front page template.
  *

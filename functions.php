@@ -42,6 +42,18 @@ function abide_theme_scripts() {
 }
 add_action('wp_enqueue_scripts', 'abide_theme_scripts');
 
+// Customize the page-post password protection login
+function abide_page_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<div class="protection-login"><form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+    ' . __( "<p>To view this page, enter the password below.<br>If you don&rsquo;t yet have a password, <a href=\"/contact-us/\">contact us</a>.</p>" ) . '
+    <label for="' . $label . '">' . __( "Password:" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" /><input type="submit" name="Submit" value="' . esc_attr__( "Submit" ) . '" />
+    </form></div>
+    ';
+    return $o;
+}
+add_filter( 'the_password_form', 'abide_page_password_form' );
 /*
  * Take control of WP Gallery styling 
  * /

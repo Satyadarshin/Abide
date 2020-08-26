@@ -41,7 +41,7 @@
 		<?php endif; ?>
 			<div class="post_intro">
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<?php the_content(); ?>
+				<?php the_excerpt(); ?>
 				<button class="read_more_btn"><a class="" href="<?php the_permalink(); ?>">Read more</a></button>
 			</div>
 		</div>

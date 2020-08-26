@@ -1,42 +1,33 @@
-.salutation {
-    position: relative;
-    z-index: 10;
-    display: block;
-    margin: 0 auto -3.5rem;
-}
-
-.banner_image {
-    border: 1px solid grey;
-    img {
-        width: 100%;
-        height: 35rem;
-        margin-bottom: -.45rem;
+.hangout {
+    padding: 5rem 0 3.5rem;
+    article {
+        margin: 0 2rem;
     }
-    .object-fit_me {
-        object-fit: cover;
-        object-position: 50% 0;
+    .area_a {
+        background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
+    }
+    .area_b {
+        background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
     }
 }
 
-.home_gallery {
+.hangout_gallery {
     padding-top: 2rem;
     article {
         margin: 0 2rem
     }
-    background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
+  
 }
 
-.home_contact_capture {
-    background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
-    padding: 5rem 0 3.5rem;
+.hangout_contact_capture {
     article {
         @media (min-width: 601px) {
             background: url('images/mermaid.png') 0 60% no-repeat;
             background-size: 40%;
+            min-height: 1000px;
         }
         @include abide_flex_direction(601px,
         600px);
-        margin: 0 2rem;
         display: flex;
         #mailing_list_signup {
             @media (min-width: 601px) {
@@ -66,6 +57,12 @@
                 width: 8rem;
                 @include abide_button
             }
+        }
+        #sign-off {
+            border: 1px solid $mid_grey;
+            border-radius: 3px;
+            padding: 0 1rem 1rem 1rem;
+            flex: 1;
         }
     }
 }

@@ -22,10 +22,12 @@
 @import 'widgets';
 @import 'navigation';
 @import 'gallery';
+@import 'custom-page-protection';
 
 /* Section specific styles */
 
-@import 'front-page';
+@import 'front-page'; 
+@import 'hangout-page';
 @import 'custom-post-types';
 *,
 *::before,
@@ -59,7 +61,8 @@ main {
         }
         overflow: auto; // Part of a fallback for older browsers that don't support grid.
         display: grid;
-        grid-template-columns: [left-border] 3fr [mid-column] 1fr [right-border];
+    //    grid-template-columns: [left-border] 3fr [mid-column] 1fr [right-border];
+       grid-template-columns: 3fr 1fr;
         article {
             // Part of a fallback for older browsers that don't support grid.
             float: left;
@@ -120,6 +123,37 @@ main {
 .read_more_btn {
     width: 8rem;
     @include abide_button;
+}
+
+#contact_form {
+    @media (min-width: 601px) {
+        margin-left: .5rem;
+    }
+    border: 1px solid $mid_grey;
+    border-radius: 3px;
+    padding: 0 1rem 1rem 1rem;
+    flex: 1;
+    form {
+        p {
+            input {
+                -webkit-appearance: none;
+            }
+            display: flex;
+            flex-direction: column;
+            .wpcf7-text {
+                border: 1px solid $mid_grey;
+                height: 1.5rem;
+                width: 100%;
+            }
+            .wpcf7-textarea {
+                width: 100%;
+            }
+        }
+        input[type="submit"] {
+            width: 8rem;
+            @include abide_button;
+        }
+    }
 }
 
 @import 'footer';
