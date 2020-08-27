@@ -30,6 +30,9 @@ h2 {
   font-size: 400%;
   margin: 1rem 0; }
 
+h3 {
+  font-size: 150%; }
+
 h4 {
   font-family: "Roboto Slab", serif;
   font-size: 120%; }
@@ -400,23 +403,26 @@ a {
   padding: 5rem 0 3.5rem; }
   .hangout article {
     margin: 0 2rem; }
-  .hangout .area_a {
-    background: url("images/line-horiz-top-2.png") 0 0 no-repeat; }
-  .hangout .area_b {
-    background: url("images/line-horiz-top-2.png") 0 0 no-repeat; }
+
+.area_a {
+  background: url("images/line-horiz-top-2.png") 0 0 no-repeat; }
+
+.area_b {
+  background: url("images/line-horiz-top-2.png") 0 0 no-repeat; }
 
 .hangout_gallery {
   padding-top: 2rem; }
   .hangout_gallery article {
     margin: 0 2rem; }
 
+@media (min-width: 601px) {
+  .two_columns article {
+    display: flex; }
+    .two_columns article h2 {
+      flex: 1; } }
+
 .hangout_contact_capture article {
   display: flex; }
-  @media (min-width: 601px) {
-    .hangout_contact_capture article {
-      background: url("images/mermaid.png") 0 60% no-repeat;
-      background-size: 40%;
-      min-height: 1000px; } }
   @media (min-width: 601px) {
     .hangout_contact_capture article {
       flex-direction: row; } }
@@ -724,6 +730,9 @@ main {
       width: 100%; }
     #contact_form form p .wpcf7-textarea {
       width: 100%; }
+    #contact_form form p .wpcf7-number {
+      border: 1px solid #c0c0c0;
+      height: 1.5rem; }
   #contact_form form input[type="submit"] {
     width: 8rem;
     -webkit-appearance: none;
@@ -741,6 +750,10 @@ main {
       color: #fcfcfc; }
     #contact_form form input[type="submit"]:hover {
       background-color: #D16200; }
+
+.responsive {
+  width: 100%;
+  height: auto; }
 
 footer {
   min-height: 8rem;

@@ -2,14 +2,15 @@
     padding: 5rem 0 3.5rem;
     article {
         margin: 0 2rem;
+        
     }
+}
     .area_a {
         background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
     }
     .area_b {
         background: url('images/line-horiz-top-2.png') 0 0 no-repeat;
     }
-}
 
 .hangout_gallery {
     padding-top: 2rem;
@@ -19,13 +20,19 @@
   
 }
 
+.two_columns {
+    @media (min-width: 601px) {
+        article {
+            h2 {
+                flex: 1
+            }
+            display: flex;
+        }
+    }
+}
+
 .hangout_contact_capture {
     article {
-        @media (min-width: 601px) {
-            background: url('images/mermaid.png') 0 60% no-repeat;
-            background-size: 40%;
-            min-height: 1000px;
-        }
         @include abide_flex_direction(601px,
         600px);
         display: flex;

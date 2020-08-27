@@ -148,12 +148,20 @@ main {
             .wpcf7-textarea {
                 width: 100%;
             }
+            .wpcf7-number {
+                border: 1px solid $mid_grey;
+                height: 1.5rem;
+            }
         }
         input[type="submit"] {
             width: 8rem;
             @include abide_button;
         }
     }
+}
+.responsive {
+    width: 100%;
+    height: auto;
 }
 
 @import 'footer';

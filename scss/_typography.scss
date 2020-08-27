@@ -20,6 +20,10 @@ h2 {
     margin: 1rem 0;
 }
 
+h3 {
+    font-size: 150%; 
+}
+
 h4 {
     font-family: $body_text;
     font-size: 120%;
@@ -56,14 +60,3 @@ a {
         ;
     }
 }
-
-// .primary_content {
-//     article {
-//         // The object here is to indent all second and upwards paragraphs. 
-//         @media (max-width: 600px) {
-//             p~p {
-//                 text-indent: 1rem !important;
-//             }
-//         }
-//     }
-// }
