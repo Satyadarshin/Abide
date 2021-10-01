@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Past Shows
  * Template for displaying past shows.
  *
  * Pulls together all of the template parts needed to display complete page content.
@@ -35,6 +36,7 @@
 					'taxonomy' => 'show-type',
 					'field'    => 'slug',
 					'terms' => 'past-show',
+					'compare' => 'IN'
 				),
 			),
 		) ); 

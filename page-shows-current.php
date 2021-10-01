@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Current Shows
  * Template for displaying current shows.
  *
  * Pulls together all of the template parts needed to display complete page content.
@@ -26,15 +27,13 @@
 	<?php 
 		endwhile; 
 		$loop = new WP_Query( array( 'post_type' => $post->post_name, 'posts_per_page' => 999, 'order' => 'DESC', 'orderby' => 'date',
-
-							'tax_query' => array(
-								array(
-									'taxonomy' => 'show-type',
-									'field'    => 'slug',
-									'terms' => 'past-show',
-									'operator' => 'NOT IN',
-								),
-							),
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'show-type',
+					'field'    => 'slug',
+					'terms' => 'current-show',
+				),
+			),
 		) ); 
 		while ( $loop->have_posts() ) : $loop->the_post(); 
 	?>
