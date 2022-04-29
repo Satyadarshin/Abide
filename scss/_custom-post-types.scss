@@ -1,50 +1,34 @@
 .post_item {
-    h3 {
-        @include abide_panel_header;
+    margin-bottom: 1rem;
+    display: grid;
+    @media (min-width: 700.5px) {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
     }
-    display: flex;
-    @include abide_flex_direction(830.5px, 830px);
+    @media (max-width: 700px) {
+        margin-right: .25rem;
+        margin-left: .25rem;
+        grid-template-rows: 1fr 1fr;
+        text-align: center;
+    }
+    
     border: 1px solid $mid_grey;
+    gap: 1rem;
     background-color: $light_grey;
-    @media (min-width: 830.5px) {
-        margin-bottom: 2rem; 
-    }
-    @media (max-width: 830px) {
-        margin: 0 5px 2rem;
-    }  
     .post_intro {
-        @media ( min-width: 830.5px) {
-            width: 60%;
-            height: 100%;
+        margin: 1rem;
+        h3 {
+            @include abide_panel_header;
         }
-        @media ( max-width: 830px) {
-            width: 95%;
-        }
-        margin-left: 1rem;
-        margin-right: 1rem;
     }
     .post_thumb {
-        @media ( max-width: 830px) {
-            width: 100%;
-        }
         &:hover {
             opacity: .7;
         }
-        @media ( min-width: 830.5px) {
-
-            width: 25%;
-        }
-        &:hover {
-            opacity: .7;
-        }
-        margin: 0 1rem 0 0;
         img {
-            @media ( min-width: 830.5px) {
-                height: 100%;
-            }
-            @media ( max-width: 830px) {
-                width: 100%;
-            }
+            width: 100%; 
+            height: 100%;
+            aspect-ratio: 1/1;
             object-fit: cover !important;
         }
     }

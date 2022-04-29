@@ -1,0 +1,51 @@
+.post_item {
+    h3 {
+        @include abide_panel_header;
+    }
+    display: flex;
+    @include abide_flex_direction(830.5px, 830px);
+    border: 1px solid $mid_grey;
+    background-color: $light_grey;
+    @media (min-width: 830.5px) {
+        margin-bottom: 2rem; 
+    }
+    @media (max-width: 830px) {
+        margin: 0 5px 2rem;
+    }  
+    .post_intro {
+        @media ( min-width: 830.5px) {
+            width: 60%;
+            height: 100%;
+        }
+        @media ( max-width: 830px) {
+            width: 95%;
+        }
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .post_thumb {
+        @media ( max-width: 830px) {
+            width: 100%;
+        }
+        &:hover {
+            opacity: .7;
+        }
+        @media ( min-width: 830.5px) {
+
+            width: 25%;
+        }
+        &:hover {
+            opacity: .7;
+        }
+        margin: 0 1rem 0 0;
+        img {
+            @media ( min-width: 830.5px) {
+                height: 100%;
+            }
+            @media ( max-width: 830px) {
+                width: 100%;
+            }
+            object-fit: cover !important;
+        }
+    }
+}

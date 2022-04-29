@@ -38,7 +38,7 @@
 		while ( $loop->have_posts() ) : $loop->the_post(); 
 	?>
 	<div class="post_item">
-		<?php if ( has_post_thumbnail() ): ?>
+	<?php if ( has_post_thumbnail() ): ?>
 		<div class="post_thumb">
 			<a href="<?php the_permalink(); ?>">
 			<?php
